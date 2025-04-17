@@ -1,0 +1,155 @@
+  /* 국가 색상  */
+  .svgMap-country {
+    fill: #00394f !important;        
+    stroke: #e7e7e7 !important;      
+    stroke-width: 0.5;
+    transition: fill 0.2s ease;
+  }
+  
+  /* 3. 마우스 오버 시 효과 */
+  .svgMap-country:hover {
+    fill: rgba(222, 22, 32, 0.8) !important;       
+    cursor: pointer;
+    transition: fill 0.3s ease;
+  }
+  
+  /* 4. 툴팁 전체 다크모드 */
+  .svgMap-tooltip {
+    background: rgba(31, 41, 55, 0.95); /* 짙은 회색 배경 */
+    color: #ffffff !important;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 호버 툴팁 스타일링 */
+  .svgMap-tooltip .svgMap-tooltip-content-wrapper,
+  .svgMap-tooltip .svgMap-tooltip-content,
+  .svgMap-tooltip .svgMap-tooltip-no-data,
+  .svgMap-tooltip .svgMap-tooltip-content table td span {
+    color: #ffffff !important;
+  }
+  .svgMap-tooltip .svgMap-tooltip-no-data {
+    margin-left: 10px;
+  }
+  .svgMap-tooltip-pointer {
+    display: none; /* 화살표 제거 */
+  }
+  
+  .svgMap-tooltip .svgMap-tooltip-title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  #svgMap-map-country-US {
+    fill: #ff6666 !important;
+  }
+  #svgMap-map-country-KR {
+    fill: #ff6666 !important;
+  }
+
+  /* 줌 버튼 스타일 수정 */
+.svgMap-control-button {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid #fff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.svgMap-control-button:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.svgMap-control-button:active {
+  background-color: rgba(0, 0, 0, 1) !important;
+}
+
+/* 줌 버튼 내부 아이콘 색상 */
+.svgMap-control-button::before,
+.svgMap-control-button::after {
+  background-color: #fff !important;
+}
+  /* .svgMap-tooltip .svgMap-tooltip-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } */
+  
+  .fly-view {
+    display: none;  /* 기본적으로 숨김 */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4faff;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.fly-view.active {
+    display: flex;  /* 활성화 시 표시 */
+}
+
+.earth {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #0588e4 url('@/assets/images/earth.png');
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    animation: animate 12s linear infinite;
+}
+
+.earth:active {
+    transform: scale(5);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 719px 0;
+    }
+}
+
+.earth:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url('@/assets/images/cloud.png');
+    background-size: cover;
+    animation: animate 18s linear infinite;
+    z-index: 1;
+}
+
+.earth img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.earth:active img {
+    transform: scale(0.2);
+}
+
+#svgMap {
+    transition: opacity 0.5s ease-out;
+}
+
+#svgMap.fade-out {
+    opacity: 0;
+}  

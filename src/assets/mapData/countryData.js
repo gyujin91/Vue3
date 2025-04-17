@@ -1,0 +1,23 @@
+export default {
+    KR: "South Korea",
+    US: "United States",
+    JP: "Japan",
+    CN: "China",
+    GB: "United Kingdom",
+    FR: "France",
+    DE: "Germany",
+    IT: "Italy",
+    ES: "Spain",
+    RU: "Russia",
+    CA: "Canada",
+    AU: "Australia",
+    BR: "Brazil",
+    IN: "India",
+    ID: "Indonesia",
+    MX: "Mexico",
+    TH: "Thailand",
+    VN: "Vietnam",
+    PH: "Philippines",
+    MY: "Malaysia",
+    SG: "Singapore"
+};

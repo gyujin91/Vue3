@@ -1,0 +1,74 @@
+/* ✅ style.css - 기본 스타일 초기화 및 전역 스타일 설정 */
+
+/* google font - Be Vietnam Pro*/
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 기본 요소 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+    /* font-weight: 100; */
+    /* font-style: normal; */
+  }
+  
+  /* 링크 기본 스타일 제거 */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* 리스트 기본 점 제거 */
+  ul,
+  ol,
+  li {
+    list-style: none;
+  }
+  
+  /* 이미지 기본 여백 제거 */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 버튼 기본 스타일 제거 */
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* 기본 폰트 및 바디 설정 */
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;  
+  }
+  
+  /* input/textarea 기본 스타일 초기화 */
+  input,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+  }
+  
+  /* 테이블 기본 초기화 */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+  } */
+
+ 
+  
